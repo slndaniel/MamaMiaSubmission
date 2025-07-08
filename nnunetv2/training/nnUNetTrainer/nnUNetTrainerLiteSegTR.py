@@ -12,10 +12,10 @@ from torch.optim.lr_scheduler import OneCycleLR
 
 from nnunetv2.training.loss.dice import get_tp_fp_fn_tn
 
-from monai.networks.nets import segresnetFR
+from monai.networks.nets import LiteSegTR
 from torch.optim import Adam
 
-class nnUNetTrainerSegResNetFR(nnUNetTrainer):
+class nnUNetTrainerLiteSegTR(nnUNetTrainer):
 
     def __init__(
             self,
@@ -47,7 +47,7 @@ class nnUNetTrainerSegResNetFR(nnUNetTrainer):
         
         label_manager = plans_manager.get_label_manager(dataset_json)
 
-        model = segresnetFR.SegResNetFR(
+        model = LiteSegTR.LiteSegTR(
             spatial_dims = len(configuration_manager.patch_size),
             init_filters = 32,
             in_channels=num_input_channels,
