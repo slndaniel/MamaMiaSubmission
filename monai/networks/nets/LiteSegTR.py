@@ -23,10 +23,10 @@ from monai.networks.layers.factories import Dropout
 from monai.networks.layers.utils import get_act_layer, get_norm_layer
 from monai.utils import UpsampleMode
 
-__all__ = ["SegResNetFR"]
+__all__ = ["LiteSegTR"]
 
 
-class SegResNetFR(nn.Module):
+class LiteSegTR(nn.Module):
     """
     SegResNet based on `3D MRI brain tumor segmentation using autoencoder regularization
     <https://arxiv.org/pdf/1810.11654.pdf>`_.
