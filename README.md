@@ -1,9 +1,9 @@
 # LiteSegTR: Lightweight Deep Learning model for Tumour Segmentation and Treatment Response Prediction in DCE-MRI Images
 
-Our segmentation model [LiteSegTR](https://github.com/slndaniel/MamaMiaSubmission/blob/main/monai/networks/nets/LiteSegTR.py) demonstrates competitive segmentation performance for breast tumours, evaluated with the public [MAMA-MIA Dataset](https://www.synapse.org/Synapse:syn60868042/files/). In the first table below, the performance for LiteSegTR and state-of-the-art models can be found. In the second table, the corresponding pairwise-wilcoxon test with the p-values is given for the Dice and HD95 metrics. Below the tables, the LiteSegTR architecture is illustrated, it uses SegResNet as the backbone and replaces the residual blocks with our lightweight residual blocks.
+Our segmentation model [LiteSegTR](https://github.com/slndaniel/MamaMiaSubmission/blob/main/monai/networks/nets/LiteSegTR.py) demonstrates competitive segmentation performance for breast tumours, evaluated with the public [MAMA-MIA dataset](https://www.synapse.org/Synapse:syn60868042/files/). In the first table below, the performance for LiteSegTR and state-of-the-art models can be found. In the second table, the corresponding pairwise-wilcoxon test with the p-values is given for the Dice and HD95 metrics. Below the tables, the LiteSegTR architecture is illustrated, it uses SegResNet as the backbone and replaces the residual blocks with our lightweight residual blocks.
 
 ### Comparison of different architectures for 3D breast tumour segmentation  
-*Evaluated on the public MAMA-MIA dataset (Garrucho et al., 2025). LiteSegTR is our proposed model.*
+*Evaluated on the public [MAMA-MIA dataset](https://www.synapse.org/Synapse:syn60868042/files/). LiteSegTR is our proposed model.*
 
 | Models        | Segmentation Score | Dice   | HD95  | MParams | GFLOPs | GB/Memory | Inference time (sec) |
 |---------------|--------------------|--------|-------|---------|--------|-----------|-----------------------|
