@@ -3,4 +3,4 @@
 Our segmentation model [LiteSegTR](https://github.com/slndaniel/MamaMiaSubmission/blob/main/monai/networks/nets/LiteSegTR.py) demonstrates 
 
 
-<img width="2086" height="2237" alt="litesegtrforpaperdf drawio" src="https://github.com/user-attachments/assets/df7d798f-fa51-4532-893a-99ea54f8f45d" />
+<img width="1043" height="1119" alt="litesegtrforpaperdf drawio" src="https://github.com/user-attachments/assets/df7d798f-fa51-4532-893a-99ea54f8f45d" />
