@@ -1,16 +1,16 @@
-# LiteSegTR: Lightweight Deep Learning model for Tumour Segmentation and Treatment Response Prediction in DCE-MRI Images
+# A Parameter-Efficient Deep Learning Based Model for Segmentation with Radiomic Feature Extraction
 
-Our segmentation model [LiteSegTR](https://github.com/slndaniel/MamaMiaSubmission/blob/main/monai/networks/nets/LiteSegTR.py) demonstrates competitive segmentation performance for breast tumours, evaluated with the public [MAMA-MIA dataset](https://www.synapse.org/Synapse:syn60868042/files/). In the first table below, the performance for LiteSegTR and state-of-the-art models can be found. In the second table, the corresponding pairwise-wilcoxon test with the p-values is given for the Dice and HD95 metrics. Below the tables, the LiteSegTR architecture is illustrated, it uses SegResNet as the backbone and replaces the residual blocks with our lightweight residual blocks.
+Our segmentation [model](https://github.com/slndaniel/MamaMiaSubmission/blob/main/monai/networks/nets/LiteSegTR.py) demonstrates competitive segmentation performance for breast tumours, evaluated with the public [MAMA-MIA dataset](https://www.synapse.org/Synapse:syn60868042/files/). In the first table below, the performance for our model and state-of-the-art models can be found. In the second table, the corresponding pairwise-wilcoxon test with the p-values is given for the Dice and HD95 metrics. Below the tables, the architecture is illustrated, it uses SegResNet as the backbone and replaces the residual blocks with our lightweight residual blocks.
 
 ### Comparison of different architectures for 3D breast tumour segmentation  
-*Evaluated on the public [MAMA-MIA dataset](https://www.synapse.org/Synapse:syn60868042/files/). LiteSegTR is our proposed model.*
+*Evaluated on the public [MAMA-MIA dataset](https://www.synapse.org/Synapse:syn60868042/files/).*
 
 | Models        | Segmentation Score | Dice   | HD95  | MParams | GFLOPs | GB/Memory | Inference time (sec) |
 |---------------|--------------------|--------|-------|---------|--------|-----------|-----------------------|
-| nnU-Net       | 82.99              | 79.98  | 21    | 30.70   | 555    | 2.436     | **2.58**              |
-| SegResNet     | **83.73**          | **80.48** | **19.52** | 18.79   | 576    | 1.905     | 12.52                |
-| HCMA-UNet     | 82.64              | 79.47  | 21.30 | 2.87    | **38** | 2.053     | 5.96                  |
-| LiteSegTR (Ours) | 83.26           | 80.37  | 20.79 | **2.61**| 87     | **1.658** | 10.83                 |
+| nnU-Net       | 82.80              | 79.96  | 21.54    | 30.70   | 555    | 2.436     | **2.58**              |
+| SegResNet     | 83.01          | 80.89 | 22.30 | 18.79   | 576    | 1.905     | 12.52                |
+| HCMA-UNet     | 81.74              | 79.04  | 23.34 | 2.87    | **38** | 2.053     | 5.96                  |
+| LiteSegTR (Ours) | **83.61**           | **80.95**  | **20.61** | **2.61**| 87     | **1.658** | 10.83                 |
 
 
 ### Wilcoxon-signed-rank test  
@@ -18,12 +18,10 @@ Our segmentation model [LiteSegTR](https://github.com/slndaniel/MamaMiaSubmissio
 
 | **Dice p-values**   | SegResNet | nnU-Net | HCMA-UNet |   | **HD95 p-values** | SegResNet | nnU-Net | HCMA-UNet |
 |---------------------|-----------|---------|-----------|---|-------------------|-----------|---------|-----------|
-| **LiteSegTR (Ours)** | 0.6096    | 0.5500  | **0.0003** |   | **LiteSegTR (Ours)** | 0.8901    | 0.2000  | 0.2844    |
-| SegResNet           | --        | 0.4532  | **0.0025** |   | SegResNet           | --        | 0.2788  | 0.1152    |
-| nnU-Net             |           | --      | **0.0278** |   | nnU-Net             |           | --      | 0.9910    |
+| **Ours** | 0.1355    | 0.0374  | **0.0000** |   | **Ours** | 0.5131    | 0.0373  | 0.3704    |
+| SegResNet           | --        | 0.8780  | **0.0009** |   | SegResNet           | --        | 0.3550  | 0.1692    |
+| nnU-Net             |           | --      | **0.0188** |   | nnU-Net             |           | --      | 0.8085    |
 | HCMA-UNet           |           |         | --        |   | HCMA-UNet           |           |         | --        |
 
+<img width="2980" height="3195" alt="litesegtrforpaperdf drawio_woFR drawio" src="https://github.com/user-attachments/assets/b6f7aafd-fb6e-482a-9633-9c7e387726d5" />
 
-
-
-<img width="2086" height="2237" alt="litesegtrforpaperdf drawio" src="https://github.com/user-attachments/assets/df7d798f-fa51-4532-893a-99ea54f8f45d" />
