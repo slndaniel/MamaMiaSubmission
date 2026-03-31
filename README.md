@@ -18,7 +18,7 @@ Our segmentation [model](https://github.com/slndaniel/MamaMiaSubmission/blob/mai
 
 | **Dice p-values**   | SegResNet | nnU-Net | HCMA-UNet |   | **HD95 p-values** | SegResNet | nnU-Net | HCMA-UNet |
 |---------------------|-----------|---------|-----------|---|-------------------|-----------|---------|-----------|
-| **Ours** | 0.1355    | 0.0374  | **0.0000** |   | **Ours** | 0.5131    | 0.0373  | 0.3704    |
+| **Ours** | 0.1355    | **0.0374**  | **0.0000** |   | **Ours** | 0.5131    | **0.0373**  | 0.3704    |
 | SegResNet           | --        | 0.8780  | **0.0009** |   | SegResNet           | --        | 0.3550  | 0.1692    |
 | nnU-Net             |           | --      | **0.0188** |   | nnU-Net             |           | --      | 0.8085    |
 | HCMA-UNet           |           |         | --        |   | HCMA-UNet           |           |         | --        |
