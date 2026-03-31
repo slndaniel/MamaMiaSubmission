@@ -10,7 +10,7 @@ Our segmentation [model](https://github.com/slndaniel/MamaMiaSubmission/blob/mai
 | nnU-Net       | 82.80              | 79.96  | 21.54    | 30.70   | 555    | 2.436     | **2.58**              |
 | SegResNet     | 83.01          | 80.89 | 22.30 | 18.79   | 576    | 1.905     | 12.52                |
 | HCMA-UNet     | 81.74              | 79.04  | 23.34 | 2.87    | **38** | 2.053     | 5.96                  |
-| LiteSegTR (Ours) | **83.61**           | **80.95**  | **20.61** | **2.61**| 87     | **1.658** | 10.83                 |
+| Ours | **83.61**           | **80.95**  | **20.61** | **2.61**| 87     | **1.658** | 10.83                 |
 
 
 ### Wilcoxon-signed-rank test  
